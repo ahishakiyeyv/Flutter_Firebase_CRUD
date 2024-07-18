@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/pages/employee.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,8 +13,10 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: (){},child:Icon(Icons.add)),
-      appBar:AppBar(
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Employee()));
+      },child:Icon(Icons.add)),
+     appBar:AppBar(
           title:Row(
             mainAxisAlignment: MainAxisAlignment.center,
           children: [
